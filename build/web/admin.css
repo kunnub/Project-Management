@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: navy;
+    padding: 15px 20px;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color:black;
+    padding: 20px 0;
+    margin: 0;
+    font-size: 2.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard Links Section */
+.dashboard-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.dashboard-links a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: left;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effects for Links */
+.dashboard-links a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: navy;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .navbar .logo {
+        font-size: 1.2rem;
+    }
+
+    .navbar ul li {
+        margin-left: 10px;
+    }
+
+    .dashboard-links a {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
