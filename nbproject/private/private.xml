@@ -3,11 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/WEB-INF/web.xml</file>
             <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/addProject.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/home.css</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/subscription.jsp</file>
             <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/projects.jsp</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/AddProjectsServlet.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/AddProjects.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/contactForm.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/home.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/clients.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/AdminFooter.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/AdminNavbar.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/editProjects.jsp</file>
         </group>
     </open-files>
 </project-private>

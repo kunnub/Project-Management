@@ -10,9 +10,11 @@
 <html>
     <head>
         <title>Project Management</title>
-        <link rel="stylesheet" href="styles/admin.css">
+        <link rel="stylesheet" href="./AdminFormsCSS.css"/>
     </head>
-    <body>
+    <body>       
+        <a href="./AdminNavbar.jsp"></a>
+
         <h1>Project Management</h1>
         <table>
             <tr>          
@@ -34,12 +36,12 @@
                 <td><%= project.getId()%></td>
                 <td><%= project.getName()%></td>
                 <td><%= project.getDesc()%></td>
-<!--                <td>
-                    <form action="GetImageServlet" method="get">
-                        <input type="hidden" name="id" value="<%= project.getId()%>">
-                        <img src="GetImageServlet?id=<%= project.getId()%>" alt="Project Image" width="100" height="100">
-                    </form>
-                </td>-->
+                <!--                <td>
+                                    <form action="GetImageServlet" method="get">
+                                        <input type="hidden" name="id" value="<%= project.getId()%>">
+                                        <img src="GetImageServlet?id=<%= project.getId()%>" alt="Project Image" width="100" height="100">
+                                    </form>
+                                </td>-->
                 <td><%= project.getStatus()%></td>
                 <td>
                     <!-- Edit Button -->
@@ -52,7 +54,7 @@
                     <!-- Delete Button -->
                     <form action="DeleteProjectsServlet" method="post" style="display:inline;">
                         <input type="hidden" name="id" value="<%= project.getId()%>">
-                        <button type="submit" onclick="return confirm('Are you sure you want to delete this project?')">Delete</button>
+                        <button type="submit" class="delete-btn" onclick="return confirm('Are you sure you want to delete this project?')">Delete</button>
                     </form>
                 </td>
             </tr>
@@ -65,7 +67,9 @@
             </tr>
             <%}%>
         </table>
-        <a href="addProject.jsp">Add New Project</a>
+        <a href="addProject.jsp" id="addNewProject">Add New Project</a>
+        <a href="./AdminFooter.jsp"></a>
+
     </body>
 </html>
 

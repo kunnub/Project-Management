@@ -21,7 +21,6 @@ public class Projects {
         this.setName(name);
         this.setDesc(desc);
         this.setStatus(status);
-
     }
 
     /**

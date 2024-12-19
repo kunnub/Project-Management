@@ -1,0 +1,123 @@
+/* General Page Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes the full viewport height */
+    background-color: #f4f4f9; /* Light background */
+}
+
+/* Heading Styling */
+h1 {
+    text-align: center;
+    margin: 20px 0; /* Space above and below the heading */
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Table Container for Centering */
+.table-container {
+    margin: 5%; /* Center the container horizontally */
+    width: 80%;
+    max-width: 1200px; /* Prevents the table from stretching too wide */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for table */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table Styling */
+table {
+    margin: 2% 3%;
+    width: 93%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 7px 5px;
+    border: 1px solid #ddd;
+    word-wrap: break-word; /* Allows text wrapping in cells */
+}
+
+th {
+    background-color: #4CAF50; /* Green header */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Alternate row background */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1; /* Row hover effect */
+}
+
+/* Button Styling */
+button, .delete-btn {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin: 4px;
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red delete button */
+}
+
+button:hover, .delete-btn:hover {
+    opacity: 0.8;
+}
+
+/* Bottom Button Container */
+.bottom-buttons {
+    text-align: center;
+    margin-top: auto; /* Pushes the buttons to the bottom */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Shadow on the top edge */
+}
+
+.bottom-buttons a, .bottom-buttons button {
+    text-decoration: none;
+    color: white;
+    background-color: #28a745; /* Green buttons */
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.bottom-buttons a:hover {
+    background-color: #218838;
+}
+
+#addNewProject{
+    border: 2px solid black;
+    width: 11%;
+    color: white;
+    background-color: green;
+    margin: 0.7% 45%;
+    padding: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 17px;
+    text-align: center;
+}
+
+#addNewProject:hover{
+    cursor: pointer;
+    background-color: graytext;
+}

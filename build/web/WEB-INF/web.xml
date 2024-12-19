@@ -58,6 +58,10 @@
         <servlet-name>AddProjectsServlet</servlet-name>
         <servlet-class>controller.AddProjectsServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>displayProjectsHome</servlet-name>
+        <servlet-class>controller.displayProjectsHome</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegController</servlet-name>
         <url-pattern>/RegController</url-pattern>
@@ -115,11 +119,15 @@
         <servlet-name>AddProjectsServlet</servlet-name>
         <url-pattern>/AddProjectsServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>displayProjectsHome</servlet-name>
+        <url-pattern>/displayProjectsHome</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
     <!-- Welcome File List -->
     <welcome-file-list>
-        <welcome-file>registration.html</welcome-file>
+        <welcome-file>displayProjectsHome</welcome-file>
     </welcome-file-list>
 </web-app>

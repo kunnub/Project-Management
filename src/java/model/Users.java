@@ -12,15 +12,15 @@ package model;
  */
 public class Users {
     
-    private int client_id;
+    private int user_id;
     private String name;
     private String email;
     
-    public Users(int client_id,String name ,String email){
+    public Users(int user_id,String name ,String email){
         
         System.out.println("Users class called");
         
-        this.setClient_id(client_id);
+        this.setUser_id(user_id);
         this.setName(name);
         this.setEmail(email);
         
@@ -57,17 +57,18 @@ public class Users {
     /**
      * @return the client_id
      */
-    public int getClient_id() {
-        return client_id;
+    public int getUser_id() {
+        return user_id;
     }
 
     /**
      * @param client_id the client_id to set
      */
-    public void setClient_id(int client_id) {
-        this.client_id = client_id;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
+    
 
 
 }

@@ -21,15 +21,14 @@ public class LoginAuthenticator {
         String query = "SELECT password FROM flipr.clients WHERE email = ?";
         String userPass = null;
 
-        try (
-                PreparedStatement ps = DBConnection.getConnection().prepareStatement(query)) {
-            ps.setString(1, email); // Use a prepared statement to prevent SQL injection
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(query)) {
+            ps.setString(1, email); 
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
                     userPass = rs.getString(1); // Retrieve the password
                 }
             }
-//            System.out.println("Retrieved password from DB: " + userPass);
+            System.out.println("Retrieved password from DB: " + userPass);
 
         }
 
