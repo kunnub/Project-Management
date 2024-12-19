@@ -11,9 +11,11 @@
 <html>
     <head>
         <title>Client Management</title>
-        <link rel="stylesheet" href="styles/admin.css">
+        <link rel="stylesheet" href="./AdminFormsCSS.css"/>
     </head>
-    <body>
+    <body>       
+<jsp:include page="./AdminNavbar.jsp" />
+
         <h1>Client Management</h1>
         <table>
             <tr>
@@ -28,7 +30,7 @@
                     for (Users user : jspUserList) {
             %>
             <tr>
-                <td><%=user.getClient_id()%></td>
+                <td><%=user.getUser_id()%></td>
                 <td><%= user.getName()%></td>
                 <td><%= user.getEmail()%></td>
 
@@ -45,5 +47,7 @@
 
             }%>
         </table>
+                <a href="./AdminFooter.jsp"></a>
+
     </body>
 </html>

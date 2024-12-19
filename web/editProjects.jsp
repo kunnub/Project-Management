@@ -5,8 +5,11 @@
 <html>
     <head>
         <title>Edit Project</title>
+        <link rel="stylesheet" href="./AdminFormsCSS.css"/>
+
     </head>
-    <body>
+    <body>        <a href="./AdminNavbar.jsp"></a>
+
         <h1>Edit Project</h1>
         <%
             String idParam = request.getParameter("id");
@@ -29,7 +32,7 @@
 
         <form action="EditProjectDetails" method="post" >
             <input type="hidden" name="id" value="<%= project.getId()%>">
-            <%= "Debug ID: " + project.getId() %>
+            <%= "Debug ID: " + project.getId()%>
 
             <label for="name">Project Name:</label>
             <input type="text" id="name" name="name" value="<%= project.getName()%>"><br><br>
@@ -46,5 +49,7 @@
 
             <button type="submit">Update</button>
         </form>
+        <a href="./AdminFooter.jsp"></a>
+
     </body>
 </html>

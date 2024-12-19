@@ -17,38 +17,27 @@ import java.util.List;
  *
  * @author HP
  */
-public class GetProjects {
+public class GetProjectsHome {
 
     public List<Projects> getProjects() {
-        
-        List<Projects> projectList = new ArrayList<>();
+        List<Projects> projectsList = new ArrayList<>();
+        try (Connection conn = DBConnection.getConnection();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT * FROM flipr.projects;")) {
 
-        String query = "SELECT projectId,projectName,projectDesc,projectStatus FROM flipr.projects;";
-        try {
-
-            Connection con = DBConnection.getConnection();
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery(query);
-
-            if (!rs.isBeforeFirst()) {
-                System.out.println("the table is empty");
-            } else {
-                while (rs.next()) {
-
-                    int id = rs.getInt("projectId");
+            while (rs.next()) {
+                 int id = rs.getInt("projectId");
                     String name = rs.getString("projectName");
                     String desc = rs.getString("projectDesc");
                     String status = rs.getString("projectStatus");
 
                     Projects projectDetails = new Projects(id, name, desc, status);
-                    projectList.add(projectDetails);
-                }
+                    projectsList.add(projectDetails);
             }
-
-        } catch (SQLException ex) {
-            System.out.println(ex);
+        } catch (SQLException e) {
+            System.out.println(e);
         }
-        return projectList;
-
+        return projectsList;
     }
+
 }

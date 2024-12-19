@@ -22,7 +22,7 @@ public class AddSubscribers {
         int i = 0;
         if (!email.trim().equals("")) {
             Connection con = DBConnection.getConnection();
-            PreparedStatement pst = con.prepareStatement("INSERT INTO flipr.subscriptions(email,sub_date) VALUES(?,CURRENT_DATE());");
+            PreparedStatement pst = con.prepareStatement("INSERT INTO flipr.subscriptions(sub_email,sub_date) VALUES(?,CURRENT_DATE());");
 //            pst.setString(1, );
             pst.setString(1, email);
 //            pst.setDate(3,);

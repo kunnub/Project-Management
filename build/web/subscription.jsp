@@ -7,9 +7,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Subscription Management</title>
-        <link rel="stylesheet" href="styles/subscription.css">
+        <link rel="stylesheet" href="./AdminFormsCSS.css"/>
     </head>
-    <body>
+    <body>        <a href="./AdminNavbar.jsp"></a>
+
         <div class="container">
             <h1>Subscription Management</h1>
             <table>
@@ -61,5 +62,7 @@
                 </tbody>
             </table>
         </div>
+                                <a href="./AdminFooter.jsp"></a>
+
     </body>
 </html>

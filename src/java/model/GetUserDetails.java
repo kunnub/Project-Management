@@ -7,6 +7,7 @@ package model;
 
 import database.DBConnection;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -22,25 +23,34 @@ public class GetUserDetails {
     public List<Users> getUserDetails() throws SQLException {
         List<Users> userList = new ArrayList<>();
 
-        String query = "SELECT client_id, name,email FROM flipr.clients;";
+        // SQL query to fetch user details without the password
+        String query = "SELECT user_id, name, email FROM flipr.clients";
 
-        Connection con = DBConnection.getConnection();
-        Statement st = con.createStatement();
-        ResultSet rs = st.executeQuery(query);
+        // Use try-with-resources for automatic resource management
+        try (Connection con = DBConnection.getConnection();
+                PreparedStatement ps = con.prepareStatement(query);
+                ResultSet rs = ps.executeQuery()) {
 
-        if (rs.isBeforeFirst()) {
-            System.out.println("table is empty");
-        } else {
-            while (rs.next()) {
-                int client_id=rs.getInt("client_id");
-                String name = rs.getString("name");
-                String email = rs.getString("email");
+            // Check if the table is empty
+            if (!rs.isBeforeFirst()) {
+                System.out.println("No users found in the database.");
+            } else {
+                // Iterate through the result set and add user details to the list
+                while (rs.next()) {
+                    int userId = rs.getInt("user_id");
+                    String name = rs.getString("name");
+                    String email = rs.getString("email");
 
-                Users userInfo = new Users(client_id,name, email);
-                userList.add(userInfo);
-
+                    // Create a Users object and add it to the list
+                    Users userInfo = new Users(userId, name, email);
+                    userList.add(userInfo);
+                }
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e; // Re-throw the exception for higher-level handling
         }
+
         return userList;
     }
 }

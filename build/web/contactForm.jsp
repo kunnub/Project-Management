@@ -11,9 +11,10 @@
 <html>
     <head>
         <title>Contact Form Submissions</title>
-        <link rel="stylesheet" href="styles/admin.css">
+        <link rel="stylesheet" href="./AdminFormsCSS.css"/>
     </head>
-    <body>
+    <body>        <a href="./AdminNavbar.jsp"></a>
+
         <h1>Contact Form Submissions</h1>
         <table>
             <thead>
@@ -26,18 +27,17 @@
                 </tr>
             </thead>
             <tbody>
-                
+
                 <%
                     List<model.ContactDetails> jspcontactList = (List<model.ContactDetails>) request.getAttribute("contacts");
                     System.out.println("contact list created");
-                    
-                     if (jspcontactList != null) {
-        System.out.println("Contacts list size: " + jspcontactList.size());
-    } else {
-        System.out.println("Contacts attribute is null.");
-    }
-                    
-                    
+
+                    if (jspcontactList != null) {
+                        System.out.println("Contacts list size: " + jspcontactList.size());
+                    } else {
+                        System.out.println("Contacts attribute is null.");
+                    }
+
                     if (jspcontactList != null && !jspcontactList.isEmpty()) {
                         System.out.println(jspcontactList.size());
                         for (ContactDetails contact : jspcontactList) {
@@ -64,6 +64,8 @@
 
 
         </table>
+        <a href="./AdminFooter.jsp"></a>
+
     </body>
 </html>
 

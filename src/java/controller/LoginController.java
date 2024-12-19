@@ -46,7 +46,7 @@ public class LoginController extends HttpServlet {
         if (login) {
             HttpSession session = request.getSession(true);
             session.setAttribute("email", email);
-            response.sendRedirect("home.jsp");
+            response.sendRedirect("displayProjectsHome");
 
         } else {
             response.sendRedirect("Clientlogin.html?error=invalid_credentials");
