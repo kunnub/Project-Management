@@ -122,8 +122,8 @@ db.password=your_mysql_password
    - Monitor newsletter subscriptions.
 
 ### Contact
-For any queries or suggestions, feel free to contact the developer:
+For any queries or suggestions, feel free to contact me:
 
--Email: <a href="mail-to:kunalbobde19@gmail.com">E-Mail</a>
+-E-mail: <a href="mailto:kunalbobde19@gmail.com">Mail Me</a>         
 -GitHub Profile: <a href="https://github.com/kunnub" >GitHub</a>
 
