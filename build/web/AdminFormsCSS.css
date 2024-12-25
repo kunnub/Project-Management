@@ -104,9 +104,73 @@ button:hover, .delete-btn:hover {
     background-color: #218838;
 }
 
-#addNewProject{
+/* Form Container Styling */
+#addProjectForm, #editProjectForm {
+    margin: 2% auto;
+    width: 60%;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form Group Styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Labels */
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input Fields */
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Textarea Styling */
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px;
+}
+
+/* Buttons */
+#addProjectButton, #updateProjectButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+#addProjectButton:hover, #updateProjectButton:hover {
+    background-color: #0056b3;
+}
+
+#addNewProject,#backToProjectList{
     border: 2px solid black;
-    width: 11%;
+    font-weight: bolder;
+    width: 15%;
     color: white;
     background-color: green;
     margin: 0.7% 45%;
@@ -117,7 +181,7 @@ button:hover, .delete-btn:hover {
     text-align: center;
 }
 
-#addNewProject:hover{
+#addNewProject:hover ,#backToProjectList:hover{
     cursor: pointer;
     background-color: graytext;
 }

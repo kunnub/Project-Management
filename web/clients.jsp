@@ -14,10 +14,10 @@
         <link rel="stylesheet" href="./AdminFormsCSS.css"/>
     </head>
     <body>       
-<jsp:include page="./AdminNavbar.jsp" />
+        <jsp:include page="./AdminNavbar.jsp" />
 
         <h1>Client Management</h1>
-        <table>
+        <table style="height: 100%;">
             <tr>
                 <th>Client Id</th>
                 <th>Client Name</th>
@@ -35,19 +35,17 @@
                 <td><%= user.getEmail()%></td>
 
             </tr>
-            <% }}
-                else
-{
+            <% }
+            } else {
 
             %>
             <tr>
                 <td colspan="3" class="no-records">No Records Found</td>
             </tr>
-            <%
-
-            }%>
+            <%                }%>
         </table>
-                <a href="./AdminFooter.jsp"></a>
+        <jsp:include page="./AdminFooter.jsp" />
+
 
     </body>
 </html>

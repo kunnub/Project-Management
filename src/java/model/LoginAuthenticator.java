@@ -22,7 +22,7 @@ public class LoginAuthenticator {
         String userPass = null;
 
         try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(query)) {
-            ps.setString(1, email); 
+            ps.setString(1, email);
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
                     userPass = rs.getString(1); // Retrieve the password

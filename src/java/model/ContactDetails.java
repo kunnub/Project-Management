@@ -10,14 +10,14 @@ package model;
  * @author HP
  */
 public class ContactDetails {
-  
+
     private int id;
     private String name;
     private String email;
     private String phone_no;
     private String address;
 
-    public ContactDetails(int id,String name,String email,String phone_no,String address){
+    public ContactDetails(int id, String name, String email, String phone_no, String address) {
         System.out.println("helllooooo");
         this.setId(id);
         this.setName(name);
@@ -97,5 +97,5 @@ public class ContactDetails {
     public void setAddress(String address) {
         this.address = address;
     }
-    
+
 }

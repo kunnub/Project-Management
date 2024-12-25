@@ -33,7 +33,6 @@ public class LoginController extends HttpServlet {
 
 //        System.out.println("Email: " + email);
 //        System.out.println("Password: " + password);
-
         LoginAuthenticator l1 = new LoginAuthenticator();
         boolean login = false;
 //System.out.println("Request URL: " + request.getRequestURL());

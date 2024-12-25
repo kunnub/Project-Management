@@ -5,27 +5,26 @@ package model;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author HP
  */
 public class Users {
-    
+
     private int user_id;
     private String name;
     private String email;
-    
-    public Users(int user_id,String name ,String email){
-        
+
+    public Users(int user_id, String name, String email) {
+
         System.out.println("Users class called");
-        
+
         this.setUser_id(user_id);
         this.setName(name);
         this.setEmail(email);
-        
-        
+
     }
+
     /**
      * @return the name
      */
@@ -67,8 +66,5 @@ public class Users {
     public void setUser_id(int user_id) {
         this.user_id = user_id;
     }
-
-    
-
 
 }

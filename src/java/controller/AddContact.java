@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,11 +19,13 @@ import model.AddContactForm;
  *
  * @author HP
  */
+@WebServlet("/addContact")
+
 public class AddContact extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.sendRedirect("home.jsp");
+        response.sendRedirect("displayProjectsHome");
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -36,7 +39,6 @@ public class AddContact extends HttpServlet {
 //        System.out.println("Email: " + email);
 //        System.out.println("Mobile: " + phno);
 //        System.out.println("Address: " + address);
-
         AddContactForm contact = new AddContactForm();
         boolean cont = false;
 
@@ -44,9 +46,9 @@ public class AddContact extends HttpServlet {
         System.out.println(cont);
 
         if (cont) {
-            response.getWriter().println("<script>alert('request Sent'); window.location.href = 'home.jsp';</script>");
+            response.getWriter().println("<script>alert('request Sent'); window.location.href = 'displayProjectsHome';</script>");
         } else {
-            response.getWriter().println("<script>alert('request not sent! try again later'); window.location.href = 'home.jsp';</script>");
+            response.getWriter().println("<script>alert('request not sent! try again later'); window.location.href = 'displayProjectsHome';</script>");
 
         }
 

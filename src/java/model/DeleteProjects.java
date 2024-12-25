@@ -17,21 +17,21 @@ import java.sql.SQLException;
  * @author HP
  */
 public class DeleteProjects {
-    
-    public boolean deleteProjects(int id) throws SQLException{
-        int rowsAffected=0;
+
+    public boolean deleteProjects(int id) throws SQLException {
+        int rowsAffected = 0;
         Connection con = DBConnection.getConnection();
         PreparedStatement pst = con.prepareStatement("DELETE FROM flipr.projects WHERE projectId = ?");
-        pst.setInt(1,id);
-        
-        rowsAffected=pst.executeUpdate();
-        
-        if(rowsAffected>0)
+        pst.setInt(1, id);
+
+        rowsAffected = pst.executeUpdate();
+
+        if (rowsAffected > 0) {
             return true;
-        
-        else 
+        } else {
             return false;
-        
+        }
+
     }
-    
+
 }

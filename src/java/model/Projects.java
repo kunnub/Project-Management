@@ -15,12 +15,15 @@ public class Projects {
     private String name;
     private String desc;
     private String status;
+    private String image;
 
-    public Projects(int id, String name, String desc, String status) {
+    public Projects(int id, String name, String desc, String image, String status) {
         this.setId(id);
         this.setName(name);
         this.setDesc(desc);
         this.setStatus(status);
+        this.setImage(image);
+
     }
 
     /**
@@ -77,5 +80,19 @@ public class Projects {
      */
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    /**
+     * @return the image
+     */
+    public String getImage() {
+        return image;
+    }
+
+    /**
+     * @param image the image to set
+     */
+    public void setImage(String image) {
+        this.image = image;
     }
 }

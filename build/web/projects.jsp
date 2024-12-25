@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="./AdminFormsCSS.css"/>
     </head>
     <body>       
-        <a href="./AdminNavbar.jsp"></a>
+        <jsp:include page="./AdminNavbar.jsp" />
 
         <h1>Project Management</h1>
         <table>
@@ -21,9 +21,11 @@
                 <th>Project Id</th>
                 <th>Project Name</th>
                 <th>Description</th>
-                <th>project status</th>
+                <th>project Image</th>
+                <th>Project Status</th>
                 <th>Actions</th>
             </tr>
+
             <%
                 List<Projects> projectList = (List<model.Projects>) request.getAttribute("projectList");
 
@@ -32,24 +34,21 @@
 
 
             %>
+
             <tr>             
                 <td><%= project.getId()%></td>
                 <td><%= project.getName()%></td>
                 <td><%= project.getDesc()%></td>
-                <!--                <td>
-                                    <form action="GetImageServlet" method="get">
-                                        <input type="hidden" name="id" value="<%= project.getId()%>">
-                                        <img src="GetImageServlet?id=<%= project.getId()%>" alt="Project Image" width="100" height="100">
-                                    </form>
-                                </td>-->
                 <td><%= project.getStatus()%></td>
+                <td><%=project.getImage()%></td>
                 <td>
                     <!-- Edit Button -->
                     <form action="EditProjectDetails" method="get" style="display:inline;">
                         <input type="hidden" name="id" value="<%= project.getId()%>">
-                        <%System.out.println(project.getId());%>
                         <button type="submit">Edit</button>
                     </form>
+
+
 
                     <!-- Delete Button -->
                     <form action="DeleteProjectsServlet" method="post" style="display:inline;">
@@ -68,7 +67,7 @@
             <%}%>
         </table>
         <a href="addProject.jsp" id="addNewProject">Add New Project</a>
-        <a href="./AdminFooter.jsp"></a>
+        <jsp:include page="./AdminFooter.jsp" />
 
     </body>
 </html>

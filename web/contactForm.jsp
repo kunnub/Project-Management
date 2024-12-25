@@ -13,10 +13,10 @@
         <title>Contact Form Submissions</title>
         <link rel="stylesheet" href="./AdminFormsCSS.css"/>
     </head>
-    <body>        <a href="./AdminNavbar.jsp"></a>
+    <body>        <jsp:include page="./AdminNavbar.jsp" />
 
         <h1>Contact Form Submissions</h1>
-        <table>
+        <table style="height: 100%;">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -64,7 +64,7 @@
 
 
         </table>
-        <a href="./AdminFooter.jsp"></a>
+        <jsp:include page="./AdminFooter.jsp" />
 
     </body>
 </html>

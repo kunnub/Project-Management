@@ -16,11 +16,11 @@ import java.sql.SQLException;
  */
 public class UpdateProjectDetail {
 
-    public boolean updateProject(int projectId, String name, String desc, String status) {
+    public boolean updateProject(int projectId, String name, String desc, String status, String image) {
 
         System.out.println("UpdateProjectDetail class called");
         boolean isUpdated = false;
-            String sql = "UPDATE flipr.projects SET projectName = ?, projectDesc = ?, projectStatus = ?,projectImg=NULL WHERE projectId = ?";
+        String sql = "UPDATE flipr.projects SET projectName = ?, projectDesc = ?,projectImg=?, projectStatus = ? WHERE projectId = ?";
 
         // Update the project details in the database
         try {
@@ -28,13 +28,13 @@ public class UpdateProjectDetail {
             PreparedStatement pst = conn.prepareStatement(sql);
             pst.setString(1, name);
             pst.setString(2, desc);
-            pst.setString(3, status);
-            pst.setInt(4, projectId);
+            pst.setString(3, image);
+            pst.setString(4, status);
+            pst.setInt(5, projectId);
 
-               System.out.println("Executing query: " + sql); // Debugging: print SQL query
+            System.out.println("Executing query: " + sql); // Debugging: print SQL query
             System.out.println("Values: " + name + ", " + desc + ", " + status + ", " + projectId); // Debugging: print parameter values
 
-           
             int rowsUpdated = pst.executeUpdate();
             if (rowsUpdated > 0) {
                 isUpdated = true;

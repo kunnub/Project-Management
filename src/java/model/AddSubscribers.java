@@ -26,7 +26,6 @@ public class AddSubscribers {
 //            pst.setString(1, );
             pst.setString(1, email);
 //            pst.setDate(3,);
-            
 
             i = pst.executeUpdate();
             if (i > 0) {

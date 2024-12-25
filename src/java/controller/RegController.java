@@ -30,29 +30,27 @@ public class RegController extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
-        
-        String name=request.getParameter("name");
-        String email=request.getParameter("email");
-        String password=request.getParameter("password");
-        
-        Registrator rg=new Registrator();
-        boolean register=false;
-        try{
-            register = rg.isRegister(name,email,password);
-        }
-        catch(SQLException e) {
+
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+
+        Registrator rg = new Registrator();
+        boolean register = false;
+        try {
+            register = rg.isRegister(name, email, password);
+        } catch (SQLException e) {
             System.out.println(e);
-            
+
         }
-        if(register){
-            HttpSession session =request.getSession(true);
-              session.setAttribute("email", email);
-            response.sendRedirect("home.jsp");
-        }
-        else{
+        if (register) {
+            HttpSession session = request.getSession(true);
+            session.setAttribute("email", email);
+            response.sendRedirect("displayProjectsHome");
+        } else {
             response.sendRedirect("registration.html");
         }
-       
+
     }
 
 }

@@ -18,49 +18,45 @@ import java.util.List;
  * @author HP
  */
 public class GetContactDetails {
-    
-    public List<ContactDetails> FetchContacts() throws SQLException{
+
+    public List<ContactDetails> FetchContacts() throws SQLException {
         System.out.println("fetching contacts started");
-        List<ContactDetails> contactList=new ArrayList<>();
-        
-        String query="SELECT * FROM flipr.contact_form;";
-        
-        Connection con=DBConnection.getConnection();
-        
+        List<ContactDetails> contactList = new ArrayList<>();
+
+        String query = "SELECT * FROM flipr.contact_form;";
+
+        Connection con = DBConnection.getConnection();
+
         System.out.println("conection established");
-        
-        Statement st=con.createStatement();
-        ResultSet rs=st.executeQuery(query);
-        
-        System.out.println("resultset value  "+ rs);
+
+        Statement st = con.createStatement();
+        ResultSet rs = st.executeQuery(query);
+
+        System.out.println("resultset value  " + rs);
         System.out.println("Executing query: " + query);
 
-        
-        if(!rs.isBeforeFirst()){
+        if (!rs.isBeforeFirst()) {
             System.out.println("table is empty");
-        }
-        else{
-            while(rs.next()){
-                int id=rs.getInt("client_id");
-                String name=rs.getString("client_name");
-                String email=rs.getString("client_email");
-                String phone_no=rs.getString("client_phno");
-                String address=rs.getString("client_add");
-                
+        } else {
+            while (rs.next()) {
+                int id = rs.getInt("client_id");
+                String name = rs.getString("client_name");
+                String email = rs.getString("client_email");
+                String phone_no = rs.getString("client_phno");
+                String address = rs.getString("client_add");
+
                 System.out.println(id);
-                
-                ContactDetails contactInfo=new ContactDetails(id,name,email,phone_no,address);
+
+                ContactDetails contactInfo = new ContactDetails(id, name, email, phone_no, address);
                 contactList.add(contactInfo);
-                
-                
+
 //                for(ContactDetails contact:contactList){
 //                    System.out.p rintln(contact);
 //                }
             }
         }
         return contactList;
-         
-        
+
     }
-    
+
 }

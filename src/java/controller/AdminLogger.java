@@ -21,7 +21,15 @@ public class AdminLogger extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.sendRedirect("AdminLogin.html");
+//        HttpSession session = request.getSession(false);
+
+//        if (session == null || session.getAttribute("role") == null || !session.getAttribute("role").equals("admin")) {
+//            // Redirect to login page if not authenticated or not an admin
+//            response.sendRedirect("registration.html");
+//        } else {
+//            // Forward to the admin page if authenticated
+//            request.getRequestDispatcher("/admin.jsp").forward(request, response);
+//        }
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -30,13 +38,13 @@ public class AdminLogger extends HttpServlet {
         String password = request.getParameter("password");
 
         if (username != null && password != null && username.equalsIgnoreCase("Admin") && password.equals("@dmin123")) {
-             HttpSession session = request.getSession();
-        session.setAttribute("isAdminLoggedIn", true);
+            HttpSession session = request.getSession();
+            session.setAttribute("isAdminLoggedIn", true);
+            session.setAttribute("role", "admin");  // Set the role attribute
+
             response.sendRedirect("admin.jsp");
         } else {
             response.sendRedirect("AdminLogin.html");
         }
     }
 }
-
-

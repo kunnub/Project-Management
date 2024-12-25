@@ -12,20 +12,20 @@ import java.sql.Timestamp;
  * @author HP
  */
 public class Subscriber {
-    
+
     private int id;
     private String email;
     private Timestamp subscriptiondate;
-    
-    public Subscriber(int id , String email, Timestamp subscriptiondate){
-    this.id=id;
-    this.email=email;
-    this.subscriptiondate=subscriptiondate;
+
+    public Subscriber(int id, String email, Timestamp subscriptiondate) {
+        this.id = id;
+        this.email = email;
+        this.subscriptiondate = subscriptiondate;
 //        System.out.println("subscriber.java called");
 //        
 //        System.out.println(id);
 
-}
+    }
 
     /**
      * @return the id
@@ -69,6 +69,5 @@ public class Subscriber {
     public void setSubscriptiondate(Timestamp subscriptiondate) {
         this.subscriptiondate = subscriptiondate;
     }
-    
-    
+
 }

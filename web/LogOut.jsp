@@ -14,8 +14,8 @@
     </head>
     <body>
         <%
-       session.invalidate();
-       response.sendRedirect("registration.html");
-       %>
+            session.invalidate();
+            response.sendRedirect("displayProjectsHome");
+        %>
     </body>
 </html>

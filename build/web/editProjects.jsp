@@ -8,9 +8,18 @@
         <link rel="stylesheet" href="./AdminFormsCSS.css"/>
 
     </head>
-    <body>        <a href="./AdminNavbar.jsp"></a>
+    <body>       
+        <jsp:include page="./AdminNavbar.jsp" />
 
+        <%System.out.println("inside edit projects.jsp ");%>
         <h1>Edit Project</h1>
+        <%
+            Projects project = (Projects) request.getAttribute("project");
+            if (project == null) {
+                out.println("Error: Project details not found.");
+                return;
+            }
+        %>
         <%
             String idParam = request.getParameter("id");
             System.out.println(idParam + " it is the id param");
@@ -21,35 +30,47 @@
             int projectId = Integer.parseInt(idParam);
             // Now, use the projectId to fetch project details from the database
         %>
-        <%
-            Projects project = (Projects) request.getAttribute("project");
-            if (project == null) {
-                out.println("Error: Project details not found.");
-                return;
-            }
-        %>
 
 
-        <form action="EditProjectDetails" method="post" >
+        <form id="editProjectForm" action="EditProjectDetails" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<%= project.getId()%>">
-            <%= "Debug ID: " + project.getId()%>
+            <%--<%= "Debug ID: " + project.getId()%>--%>
 
-            <label for="name">Project Name:</label>
-            <input type="text" id="name" name="name" value="<%= project.getName()%>"><br><br>
+            <div class="form-group" id="projectNameGroup">
+                <label for="projectNameInput">Project Name:</label>
+                <input type="text" id="projectNameInput" name="name" value="<%= project.getName()%>" required>
+            </div>
 
-            <label for="description">Description:</label>
-            <textarea id="description" name="description"><%= project.getDesc()%></textarea><br><br>
+            <div class="form-group" id="projectDescriptionGroup">
+                <label for="projectDescriptionInput">Description:</label>
+                <textarea id="projectDescriptionInput" name="description" required><%= project.getDesc()%></textarea>
+            </div>
 
-            <label for="status">Status:</label>
-            <select id="status" name="status">
-                <option value="Active" <%= project.getStatus().equals("Active") ? "selected" : ""%>>Active</option>
-                <option value="Inactive" <%= project.getStatus().equals("Inactive") ? "selected" : ""%>>Inactive</option>
+            <div class="form-group" id="projectImageGroup">
+                <label for="projectImageInput">Image</label>
+                <%System.out.println("project image is  " + project.getImage());%>
 
-            </select><br><br>
+                <input type="file" name="image" id="image" accept="image/*" required><%= project.getImage()%><br>
+                <!--<file id="projectDescriptionInput" name="image" required></textarea>-->
+            </div>
 
-            <button type="submit">Update</button>
+            <div class="form-group" id="projectStatusGroup">
+                <label for="projectStatusSelect">Status:</label>
+                <select id="projectStatusSelect" name="status">
+                    <%System.out.println("project status is  " + project.getStatus());%>
+                    <option value="Active" <%= project.getStatus().equals("Active") ? "selected" : ""%>>For-Sale</option>
+                    <option value="Inactive" <%= project.getStatus().equals("Inactive") ? "selected" : ""%>>Sold</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="submitButtonGroup">
+                <button id="updateProjectButton" type="submit">Update</button>
+            </div>
         </form>
-        <a href="./AdminFooter.jsp"></a>
+        <a href="FetchProjectDetails" id="backToProjectList">Back</a>
+
+
+        <jsp:include page="./AdminFooter.jsp" />
 
     </body>
 </html>

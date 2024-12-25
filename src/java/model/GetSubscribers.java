@@ -29,27 +29,25 @@ public class GetSubscribers {
 
         Connection con = DBConnection.getConnection();
         Statement stmt = con.createStatement();
-        ResultSet rs = stmt.executeQuery(query); 
+        ResultSet rs = stmt.executeQuery(query);
 
 //            System.out.println("connection established...chk4");
-
         if (!rs.isBeforeFirst()) {  // Checks if the result set is empty
             System.out.println("ResultSet is empty.");
         } else {
             System.out.println("ResultSet contains data.");
-        
 
-        // Process the result set
-        while (rs.next()) {
-            int id = rs.getInt("sub_id");
-            String email = rs.getString("sub_email");
-            Timestamp subscriptionDate = rs.getTimestamp("sub_date");
+            // Process the result set
+            while (rs.next()) {
+                int id = rs.getInt("sub_id");
+                String email = rs.getString("sub_email");
+                Timestamp subscriptionDate = rs.getTimestamp("sub_date");
 
-            // Create a Subscriber object and add to the list
-            Subscriber subscriber = new Subscriber(id, email, subscriptionDate);
-            subscribers.add(subscriber);
+                // Create a Subscriber object and add to the list
+                Subscriber subscriber = new Subscriber(id, email, subscriptionDate);
+                subscribers.add(subscriber);
 //            System.out.println("subscribers added to the list...chk 5");
-        }
+            }
         }
 
         return subscribers; // Return the list of subscribers

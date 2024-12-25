@@ -26,13 +26,14 @@ public class GetProjectsHome {
                 ResultSet rs = stmt.executeQuery("SELECT * FROM flipr.projects;")) {
 
             while (rs.next()) {
-                 int id = rs.getInt("projectId");
-                    String name = rs.getString("projectName");
-                    String desc = rs.getString("projectDesc");
-                    String status = rs.getString("projectStatus");
+                int id = rs.getInt("projectId");
+                String name = rs.getString("projectName");
+                String desc = rs.getString("projectDesc");
+                String imagePath = rs.getString("projectImg");
+                String status = rs.getString("projectStatus");
 
-                    Projects projectDetails = new Projects(id, name, desc, status);
-                    projectsList.add(projectDetails);
+                Projects projectDetails = new Projects(id, name, desc, imagePath, status);
+                projectsList.add(projectDetails);
             }
         } catch (SQLException e) {
             System.out.println(e);

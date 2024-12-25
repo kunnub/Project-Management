@@ -20,9 +20,9 @@ public class Registrator {
         boolean register;
 
         int i = 0;
-      if (!name.trim().equals("") && !email.trim().equals("") && (password.trim().length() >= 8)) {
-          System.out.println(name);
-          System.out.println(email);
+        if (!name.trim().equals("") && !email.trim().equals("") && (password.trim().length() >= 8)) {
+            System.out.println(name);
+            System.out.println(email);
 
             Connection con = DBConnection.getConnection();
             PreparedStatement pst = con.prepareStatement("INSERT INTO flipr.clients(name,email,password) VALUES(?,?,?);");
@@ -32,7 +32,7 @@ public class Registrator {
             pst.setString(3, password);
 
             i = pst.executeUpdate();
-          System.out.println(i);
+            System.out.println(i);
             if (i > 0) {
 
                 return true;

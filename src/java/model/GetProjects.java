@@ -20,10 +20,10 @@ import java.util.List;
 public class GetProjects {
 
     public List<Projects> getProjects() {
-        
+
         List<Projects> projectList = new ArrayList<>();
 
-        String query = "SELECT projectId,projectName,projectDesc,projectStatus FROM flipr.projects;";
+        String query = "SELECT * FROM flipr.projects;";
         try {
 
             Connection con = DBConnection.getConnection();
@@ -39,8 +39,9 @@ public class GetProjects {
                     String name = rs.getString("projectName");
                     String desc = rs.getString("projectDesc");
                     String status = rs.getString("projectStatus");
+                    String imagePath = rs.getString("projectImg");
 
-                    Projects projectDetails = new Projects(id, name, desc, status);
+                    Projects projectDetails = new Projects(id, name, desc, status, imagePath);
                     projectList.add(projectDetails);
                 }
             }
