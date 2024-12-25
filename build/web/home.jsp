@@ -39,7 +39,7 @@
                 & Marketing
             </div>
             <div class="contact-form" id="contact-form">
-                <h1>Get a Free Consultation</h1>
+                <h1>Get a Free <br>Consultation</h1>
                 <form action="AddContact" method="post">
                     <input type="text" name="name" placeholder="Full Name" required>
                     <input type="email" name="email" placeholder="Enter Email Address" required>

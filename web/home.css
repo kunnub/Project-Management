@@ -62,6 +62,7 @@ justify-content: space-between;
 height: 100vh;
 padding: 0 50px;
 background-image: url("./assets/images/young-couple-examining-blueprints-with-real-estate-agent-while-buying-new-home.svg");
+/*filter:brightness(1.5);*/
 background-size: cover;
 background-position: center;
 position: relative;
@@ -92,28 +93,35 @@ position: relative;
     text-align: center;
     background-color: #4a5a8a;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 7px;
     width: 40%;
+    height: 90%;
     z-index: 2;
+    opacity: 90%;
+    /*filter:brightness(0.9);*/
 }
 .contact-form h1 {
     color: white;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 34px;
+    margin: 10px auto 20px;
 }
-input[type="text"], input[type="email"], input[type="tel"] {
+#contact-form input[type="text"], #contact-form input[type="email"], #contact-form input[type="tel"] {
 
-    width: 100%;
+    width: 90%;
     padding: 15px;
     margin: 10px 0;
-    border: 2px solid #fff;
+    border: 2px solid #ccd2ed;
     border-radius: 5px;
     box-sizing: border-box;
-    font-size: 16px;
-    color: #4a5a8a;
+    font-size: 19px;
+    background-color: #4a5a8a;
+    color: #fff;
+    font-weight: bold;
+    
 }
-input::placeholder {
-    color: #4a5a8a;
+.contact-form input::placeholder {
+    color: #fff;
+    opacity: 45%;
 }
 .btn {
     background-color: #f76c3c;
@@ -123,11 +131,14 @@ input::placeholder {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    width: 100%;
-    margin-top: 20px;
+    width: 90%;
+    margin-top: 24px;
 }
 .btn:hover {
     background-color: #e65a2b;
+}
+.contact-form:hover{
+    opacity: 200%;
 }
 
 /* Stable Container */
@@ -342,7 +353,7 @@ input::placeholder {
 
 
 #projects p {
-    margin: 1.5% auto;
+    margin: 1.5% ;
 }
 
 .project-container {
@@ -482,7 +493,7 @@ footer {
 
 /* Bottom Footer Section */
 .footer-bottom {
-    padding: 8px;
+    margin: 0.5% auto;
     background-color: #222;
     color: white;
     display: flex;
@@ -493,17 +504,17 @@ footer {
 }
 
 .footer-bottom p {
-    margin: 21.5;
+    justify-self: left;
     font-size: 12px;
 }
 
 .footer-brand .brand-logo {
+    display: flex;
     height: 25px;
-    align-items: center;
-
+    margin: 1px auto;
     width: auto;
     color: #efeff0;
-    filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(180deg); /* Customize as needed */
+    filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(180deg); /* Customize the logo */
 }
 
 /* Footer Styling */
@@ -517,6 +528,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 1% auto;
     flex-wrap: wrap; /* Makes it responsive */
 }
 
@@ -542,6 +554,7 @@ footer {
     border-radius: 20px 0 0 20px;
     outline: none;
     margin-left: -50%;
+    color: black;
 }
 
 .subscribe button {
