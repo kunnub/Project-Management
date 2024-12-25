@@ -14,14 +14,9 @@
     </head>
     <body>
         <%
-<<<<<<< HEAD
             session.invalidate();
             response.sendRedirect("displayProjectsHome");
         %>
-=======
-       session.invalidate();
-       response.sendRedirect("registration.html");
-       %>
->>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
+
     </body>
 </html>

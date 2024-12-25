@@ -19,7 +19,7 @@ import model.AddContactForm;
  *
  * @author HP
  */
-@WebServlet("/addContact")
+//@WebServlet("/addContact")
 public class AddContact extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -39,7 +39,6 @@ public class AddContact extends HttpServlet {
 //        System.out.println("Email: " + email);
 //        System.out.println("Mobile: " + phno);
 //        System.out.println("Address: " + address);
-
         AddContactForm contact = new AddContactForm();
         boolean cont = false;
 
@@ -50,7 +49,6 @@ public class AddContact extends HttpServlet {
             response.getWriter().println("<script>alert('request Sent'); window.location.href = 'displayProjectsHome';</script>");
         } else {
             response.getWriter().println("<script>alert('request not sent! try again later'); window.location.href = 'displayProjectsHome';</script>");
-
 
         }
 

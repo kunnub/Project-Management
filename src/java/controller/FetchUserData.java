@@ -22,7 +22,6 @@ import model.Users;
  * @author HP
  */
 @WebServlet("/fetchUser")
-
 public class FetchUserData extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

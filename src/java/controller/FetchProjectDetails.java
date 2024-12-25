@@ -22,8 +22,6 @@ import model.Projects;
  * @author HP
  */
 @WebServlet("/fetchProject")
-
-
 public class FetchProjectDetails extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -40,4 +38,3 @@ public class FetchProjectDetails extends HttpServlet {
         dispatcher.forward(request, response);
     }
 }
-

@@ -17,10 +17,10 @@ import model.AddSubscribers;
 
 /**
  *
-// * @author HP
-* */
- @WebServlet("/addSubscription")
-
+ * // * @author HP
+ *
+ */
+@WebServlet("/addSubscription")
 public class AddSubscription extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -45,7 +45,6 @@ public class AddSubscription extends HttpServlet {
             } else {
 //            request.setAttribute("message", "Action failed. Please try again.");
                 response.getWriter().println("<script>alert('Subscription failed. Please try again!'); window.location.href = 'displayProjectsHome';</script>");
-
 
             }
         } catch (SQLException e) {

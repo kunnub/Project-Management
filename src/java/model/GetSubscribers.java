@@ -33,7 +33,6 @@ public class GetSubscribers {
         ResultSet rs = stmt.executeQuery(query);
 
 //            System.out.println("connection established...chk4");
-
         if (!rs.isBeforeFirst()) {  // Checks if the result set is empty
             System.out.println("ResultSet is empty.");
         } else {

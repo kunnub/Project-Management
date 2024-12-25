@@ -33,10 +33,7 @@
         <servlet-name>FetchContactDetails</servlet-name>
         <servlet-class>controller.FetchContactDetails</servlet-class>
     </servlet>
-<<<<<<< HEAD
-    
-=======
->>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
+
     <!-- Servlet Mappings -->
     <servlet>
         <servlet-name>FetchUserData</servlet-name>
@@ -47,13 +44,7 @@
         <servlet-class>controller.FetchProjectDetails</servlet-class>
     </servlet>
     <servlet>
-<<<<<<< HEAD
-=======
-        <servlet-name>ImageServlet</servlet-name>
-        <servlet-class>controller.ImageServlet</servlet-class>
-    </servlet>
-    <servlet>
->>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
+
         <servlet-name>EditProjectDetails</servlet-name>
         <servlet-class>controller.EditProjectDetails</servlet-class>
     </servlet>
@@ -111,13 +102,7 @@
         <url-pattern>/FetchProjectDetails</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-<<<<<<< HEAD
-=======
-        <servlet-name>ImageServlet</servlet-name>
-        <url-pattern>/ImageServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
->>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
+
         <servlet-name>EditProjectDetails</servlet-name>
         <url-pattern>/EditProjectDetails</url-pattern>
     </servlet-mapping>
@@ -133,9 +118,8 @@
         <servlet-name>displayProjectsHome</servlet-name>
         <url-pattern>/displayProjectsHome</url-pattern>
     </servlet-mapping>
-<<<<<<< HEAD
     <!--filter config and mapping-->
-<!--    
+    <!--    
     <filter>
         <filter-name>AdminAuthFilter</filter-name>
         <filter-class>controller.AdminAuthFilter</filter-class>
@@ -144,8 +128,7 @@
         <filter-name>AdminAuthFilter</filter-name>
         <url-pattern>/admin/*</url-pattern>
     </filter-mapping>-->
-=======
->>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
+
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>

@@ -24,7 +24,6 @@ import model.AddProjects;
  */
 @MultipartConfig
 @WebServlet("/AddProject")
-
 public class AddProjectsServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -71,6 +70,5 @@ public class AddProjectsServlet extends HttpServlet {
         }
 
     }
-
 
 }

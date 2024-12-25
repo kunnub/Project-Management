@@ -20,7 +20,6 @@ import model.DeleteSubscribers;
  * @author HP
  */
 @WebServlet("/deletesubscriptions")
-
 public class DeleteSubscriptions extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

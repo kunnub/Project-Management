@@ -25,8 +25,6 @@ import model.Subscriber;
  * @author HP
  */
 @WebServlet("/fetchSubscriptions")
-
-
 public class FetchSubscriptions extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -46,7 +44,6 @@ public class FetchSubscriptions extends HttpServlet {
             request.setAttribute("subscribers", subscribers);
 //            System.out.println("chk3...");
             request.getRequestDispatcher("subscription.jsp").forward(request, response);
-
 
         } catch (SQLException ex) {
             Logger.getLogger(FetchSubscriptions.class.getName()).log(Level.SEVERE, null, ex);

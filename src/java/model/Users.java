@@ -60,9 +60,7 @@ public class Users {
         return user_id;
     }
 
-    /**
-     * @param client_id the client_id to set
-     */
+  
     public void setUser_id(int user_id) {
         this.user_id = user_id;
     }

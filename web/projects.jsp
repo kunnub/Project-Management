@@ -13,11 +13,9 @@
         <link rel="stylesheet" href="./AdminFormsCSS.css"/>
     </head>
     <body>       
-<<<<<<< HEAD
+
         <jsp:include page="./AdminNavbar.jsp" />
-=======
-        <a href="./AdminNavbar.jsp"></a>
->>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
+
 
         <h1>Project Management</h1>
         <table>
@@ -25,17 +23,11 @@
                 <th>Project Id</th>
                 <th>Project Name</th>
                 <th>Description</th>
-<<<<<<< HEAD
                 <th>project Image</th>
                 <th>Project Status</th>
                 <th>Actions</th>
             </tr>
 
-=======
-                <th>project status</th>
-                <th>Actions</th>
-            </tr>
->>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
             <%
                 List<Projects> projectList = (List<model.Projects>) request.getAttribute("projectList");
 
@@ -44,42 +36,20 @@
 
 
             %>
-<<<<<<< HEAD
 
-=======
->>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
             <tr>             
                 <td><%= project.getId()%></td>
                 <td><%= project.getName()%></td>
                 <td><%= project.getDesc()%></td>
-<<<<<<< HEAD
                 <td><%= project.getStatus()%></td>
                 <td><%=project.getImage()%></td>
-=======
-                <!--                <td>
-                                    <form action="GetImageServlet" method="get">
-                                        <input type="hidden" name="id" value="<%= project.getId()%>">
-                                        <img src="GetImageServlet?id=<%= project.getId()%>" alt="Project Image" width="100" height="100">
-                                    </form>
-                                </td>-->
-                <td><%= project.getStatus()%></td>
->>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
                 <td>
                     <!-- Edit Button -->
                     <form action="EditProjectDetails" method="get" style="display:inline;">
                         <input type="hidden" name="id" value="<%= project.getId()%>">
-<<<<<<< HEAD
                         <button type="submit">Edit</button>
                     </form>
 
-
-
-=======
-                        <%System.out.println(project.getId());%>
-                        <button type="submit">Edit</button>
-                    </form>
-
->>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
                     <!-- Delete Button -->
                     <form action="DeleteProjectsServlet" method="post" style="display:inline;">
                         <input type="hidden" name="id" value="<%= project.getId()%>">
@@ -97,11 +67,8 @@
             <%}%>
         </table>
         <a href="addProject.jsp" id="addNewProject">Add New Project</a>
-<<<<<<< HEAD
         <jsp:include page="./AdminFooter.jsp" />
-=======
-        <a href="./AdminFooter.jsp"></a>
->>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
+
 
     </body>
 </html>

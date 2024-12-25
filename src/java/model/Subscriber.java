@@ -25,9 +25,7 @@ public class Subscriber {
 //        System.out.println("subscriber.java called");
 //        
 //        System.out.println(id);
-
     }
-
 
     /**
      * @return the id

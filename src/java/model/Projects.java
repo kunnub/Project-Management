@@ -25,7 +25,6 @@ public class Projects {
         this.setStatus(status);
         this.setImage(image);
 
-
     }
 
     /**

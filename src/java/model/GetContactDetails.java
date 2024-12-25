@@ -50,7 +50,6 @@ public class GetContactDetails {
                 ContactDetails contactInfo = new ContactDetails(id, name, email, phone_no, address);
                 contactList.add(contactInfo);
 
-
 //                for(ContactDetails contact:contactList){
 //                    System.out.p rintln(contact);
 //                }
@@ -60,5 +59,3 @@ public class GetContactDetails {
 
     }
 }
-
-

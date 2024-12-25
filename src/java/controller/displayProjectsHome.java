@@ -22,7 +22,6 @@ import model.Projects;
  * @author HP
  */
 @WebServlet("/home")
-
 public class displayProjectsHome extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

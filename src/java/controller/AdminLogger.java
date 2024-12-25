@@ -30,7 +30,6 @@ public class AdminLogger extends HttpServlet {
 //            // Forward to the admin page if authenticated
 //            request.getRequestDispatcher("/admin.jsp").forward(request, response);
 //        }
-
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -42,7 +41,6 @@ public class AdminLogger extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("isAdminLoggedIn", true);
             session.setAttribute("role", "admin");  // Set the role attribute
-
 
             response.sendRedirect("admin.jsp");
         } else {

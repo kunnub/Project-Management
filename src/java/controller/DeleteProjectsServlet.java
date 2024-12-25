@@ -18,8 +18,6 @@ import model.DeleteProjects;
 import model.GetProjectforEdit;
 import model.Projects;
 
-
-
 /**
  *
  * @author HP
@@ -75,14 +73,13 @@ public class DeleteProjectsServlet extends HttpServlet {
             System.out.println(ex);;
             response.getWriter().println("Error occurred while deleting the project.");
         }
-       
+
         try {
-            int id= Integer.parseInt(request.getParameter("id"));
-            DeleteProjects deleteProject=new DeleteProjects();
-            if(deleteProject.deleteProjects(id)){
+            int id = Integer.parseInt(request.getParameter("id"));
+            DeleteProjects deleteProject = new DeleteProjects();
+            if (deleteProject.deleteProjects(id)) {
                 response.sendRedirect("FetchProjectDetails");
-            }
-            else{
+            } else {
                 response.getWriter().println("failed to delete Project");
             }
         } catch (SQLException ex) {

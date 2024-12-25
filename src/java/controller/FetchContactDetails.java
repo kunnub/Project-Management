@@ -23,7 +23,6 @@ import model.GetContactDetails;
  * @author HP
  */
 @WebServlet("/fetchcontact")
-
 public class FetchContactDetails extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -55,4 +54,3 @@ public class FetchContactDetails extends HttpServlet {
     }
 
 }
-
