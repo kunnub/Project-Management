@@ -139,7 +139,7 @@
                     <% String imageName = project.getImage();%>
                     <%String imagePath = "ImgDirectory/" + imageName;%>
 
-                    <img src="<%=imagePath%>"alt="<%= project.getName()%>" />
+                    <img src="<%=imagePath%>"alt="<%= project.getName()%>" id="projImg" width="25%" height="45%"/>
                     <h3><%= project.getName()%></h3>
                     <p><%= project.getDesc()%></p>
                     <button>Read More</button>
