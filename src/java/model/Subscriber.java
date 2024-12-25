@@ -21,11 +21,13 @@ public class Subscriber {
         this.id = id;
         this.email = email;
         this.subscriptiondate = subscriptiondate;
+
 //        System.out.println("subscriber.java called");
 //        
 //        System.out.println(id);
 
     }
+
 
     /**
      * @return the id

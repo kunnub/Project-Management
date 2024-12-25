@@ -12,6 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+
 /**
  *
  * @author HP
@@ -21,7 +22,9 @@ public class GetProjectforEdit {
     public Projects getProjectById(int projectId) {
         Projects project = null;
         try {
+
             String query = "SELECT projectId, projectName, projectDesc, projectImg,projectStatus FROM flipr.projects WHERE projectId = ?";
+
             Connection con = DBConnection.getConnection();
             PreparedStatement pst = con.prepareStatement(query);
             pst.setInt(1, projectId);

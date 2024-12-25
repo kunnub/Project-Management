@@ -1,10 +1,14 @@
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package controller;
 
 import java.io.File;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,6 +18,12 @@ import model.DeleteProjects;
 import model.GetProjectforEdit;
 import model.Projects;
 
+
+
+/**
+ *
+ * @author HP
+ */
 @WebServlet("/deleteProject")
 public class DeleteProjectsServlet extends HttpServlet {
 
@@ -62,8 +72,21 @@ public class DeleteProjectsServlet extends HttpServlet {
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(DeleteProjectsServlet.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(ex);;
             response.getWriter().println("Error occurred while deleting the project.");
+        }
+       
+        try {
+            int id= Integer.parseInt(request.getParameter("id"));
+            DeleteProjects deleteProject=new DeleteProjects();
+            if(deleteProject.deleteProjects(id)){
+                response.sendRedirect("FetchProjectDetails");
+            }
+            else{
+                response.getWriter().println("failed to delete Project");
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex);
         }
     }
 }

@@ -24,6 +24,7 @@ public class Registrator {
             System.out.println(name);
             System.out.println(email);
 
+
             Connection con = DBConnection.getConnection();
             PreparedStatement pst = con.prepareStatement("INSERT INTO flipr.clients(name,email,password) VALUES(?,?,?);");
 
@@ -33,6 +34,7 @@ public class Registrator {
 
             i = pst.executeUpdate();
             System.out.println(i);
+
             if (i > 0) {
 
                 return true;

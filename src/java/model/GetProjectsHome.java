@@ -34,6 +34,7 @@ public class GetProjectsHome {
 
                 Projects projectDetails = new Projects(id, name, desc, imagePath, status);
                 projectsList.add(projectDetails);
+
             }
         } catch (SQLException e) {
             System.out.println(e);

@@ -36,7 +36,6 @@ public class FetchUserData extends HttpServlet {
             request.setAttribute("userList", UserList);
             RequestDispatcher dispatcher = request.getRequestDispatcher("clients.jsp");
             dispatcher.forward(request, response);
-
         } catch (SQLException ex) {
             System.out.println(ex);
         }

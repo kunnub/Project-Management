@@ -9,11 +9,17 @@
         <title>Subscription Management</title>
         <link rel="stylesheet" href="./AdminFormsCSS.css"/>
     </head>
+<<<<<<< HEAD
     <body>       
         <jsp:include page="./AdminNavbar.jsp" />
 
 
         <div class="container" style="height: 100%;">
+=======
+    <body>        <a href="./AdminNavbar.jsp"></a>
+
+        <div class="container">
+>>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
             <h1>Subscription Management</h1>
             <table>
                 <thead>
@@ -64,8 +70,12 @@
                 </tbody>
             </table>
         </div>
+<<<<<<< HEAD
         <jsp:include page="./AdminFooter.jsp" />
 
+=======
+                                <a href="./AdminFooter.jsp"></a>
+>>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
 
     </body>
 </html>

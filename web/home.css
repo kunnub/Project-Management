@@ -1,6 +1,8 @@
 /* General Reset */
 * {
+
     font-family: Poppins, sans-serif;
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,7 +18,7 @@ h2 {
     text-align: center;
 }
 
-/* Navbar */
+/*navbar*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -53,16 +55,17 @@ h2 {
 }
 
 /* First Page */
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100vh;
-    padding: 0 50px;
-    background-image: url("./assets/images/young-couple-examining-blueprints-with-real-estate-agent-while-buying-new-home.svg");
-    background-size: cover;
-    background-position: center;
-    position: relative;
+.container{
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 100vh;
+padding: 0 50px;
+background-image: url("./assets/images/young-couple-examining-blueprints-with-real-estate-agent-while-buying-new-home.svg");
+background-size: cover;
+background-position: center;
+position: relative;
+
 }
 
 .container::before {
@@ -74,6 +77,7 @@ h2 {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
+
 }
 
 .text-section {
@@ -81,6 +85,7 @@ h2 {
     font-size: 5em;
     font-weight: bold;
     z-index: 2;
+
 }
 
 .contact-form {
@@ -97,6 +102,7 @@ h2 {
     margin-bottom: 20px;
 }
 input[type="text"], input[type="email"], input[type="tel"] {
+
     width: 100%;
     padding: 15px;
     margin: 10px 0;
@@ -130,12 +136,14 @@ input::placeholder {
     margin: 2% 0 5% 0;
     justify-content: space-between;
     align-items: flex-start;
+
 }
 
 .side-header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
     width: 40%;
     margin: auto;
     padding-left: 4%;
@@ -146,13 +154,16 @@ input::placeholder {
     font-size: 28px;
     margin-bottom: 4%;
     color: #1a73e8;
+
 }
 
 .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
+
     position: relative;
+
     width: 50%;
 }
 
@@ -199,6 +210,7 @@ input::placeholder {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+
 }
 
 .feature {
@@ -214,6 +226,7 @@ input::placeholder {
 
 .feature .icon {
     width: 60px;
+
     height: 60px;
     margin-bottom: 15px;
     z-index: 1;
@@ -241,6 +254,7 @@ input::placeholder {
 }
 
 /* Gallery */
+
 .gallery {
     display: flex;
     justify-content: center;
@@ -287,6 +301,7 @@ input::placeholder {
     font-size: 28px;
     margin-bottom: 20px;
     margin-top: 25px;
+
 }
 
 .about-us p {
@@ -310,6 +325,7 @@ input::placeholder {
 #background-img5{
     transform: translatex(3400%);
     z-index: 0;
+
 }
 /* Our Projects Section */
 #projects {
@@ -318,10 +334,12 @@ input::placeholder {
 }
 
 #projects h2 {
+
     margin: 1% auto;
     color: #1a73e8;
     font-size: 28px;
 }
+
 
 #projects p {
     margin: 1.5% auto;
@@ -332,6 +350,7 @@ input::placeholder {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+
 }
 
 .project {
@@ -366,6 +385,7 @@ input::placeholder {
 }
 
 #clients h2 {
+
     margin: 1.1% auto;
     color: #1a73e8;
     font-size: 28px;
@@ -378,6 +398,7 @@ input::placeholder {
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping */
     width: 100%; /* Ensure the container takes up full width */
+
 }
 
 .client {
@@ -413,6 +434,7 @@ input::placeholder {
     text-overflow: ellipsis; /* Add ellipsis if text overflows */
     white-space: normal; /* Allow text to wrap within the paragraph */
 }
+
 
 
 /* Footer Styles */
@@ -478,6 +500,7 @@ footer {
 .footer-brand .brand-logo {
     height: 25px;
     align-items: center;
+
     width: auto;
     color: #efeff0;
     filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(180deg); /* Customize as needed */
@@ -611,6 +634,7 @@ footer {
         width: 100%;
         margin-bottom: 20px;
     }
+
 
     .footer-content {
         flex-direction: column;

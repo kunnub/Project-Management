@@ -181,7 +181,10 @@ textarea {
     text-align: center;
 }
 
+
 #addNewProject:hover ,#backToProjectList:hover{
     cursor: pointer;
     background-color: graytext;
 }
+
+

@@ -95,6 +95,7 @@
             </div>
         </div>
 
+<<<<<<< HEAD
         <div class="gallery">
             <div class="gallery-item">
                 <img id="background-img1" alt="none" src="./assets/shapes/Subtract-2.svg"/>
@@ -114,6 +115,32 @@
         <img id="background-img5" alt="none" src="./assets/shapes/Subtract-5.svg"/>
 
 
+=======
+        <!--        <div class="gallery">
+                    <img src="./assets/shapes/Rectangle55.svg" class="shape shape1" alt="Gallery Shape 1">
+                    <img src="./assets/shapes/Rectangle54.svg" class="shape shape2" alt="Gallery Shape 2">
+                    <img src="./assets/shapes/Rectangle58.svg" class="shape shape3" alt="Gallery Shape 3">
+                    <img src="./assets/shapes/Ellipse24-1.svg" class="shape shape4" alt="Gallery Shape 4">
+                    <div class="gallery-item">
+                        <img src="./assets/shapes/Subtract-5.svg" class="bg-shape" alt="Foreground Shape 1">
+                        <img id="gallery-img1" alt="Realtor showing a house to a client" height="150" src="./assets/images/pexels-andres-ayrton-6578391.svg" width="200"/>
+        
+                        <img src="./assets/shapes/Group-1000001645.svg" class="bg-shape" alt="Foreground Shape 2">
+                    </div>
+        
+                    <div class="gallery-item">
+                        <img id="gallery-img3" alt="Realtor with a happy family" height="250" src="./assets/images/pexels-brett-sayles-2881232-1.svg" width="300"/>
+                        <img src="./assets/shapes/Rectangle58.svg" class="bg-shape" alt="Foreground Shape 5" >
+                         <img src="./assests/shapes/Subtract-3.svg" class="foreground-shape" alt="Foreground Shape 6"> 
+                    </div>
+                    <div class="gallery-item">
+                        <img id="gallery-img2" alt="Realtor discussing with clients" height="200" src="./assets/images/pexels-brett-sayles-2881232-2.svg" width="250"/>
+                        <img src="./assets/shapes/Ellipse10.svg" class="foreground-shape" alt="Foreground Shape 3">
+                        <img src="./assets/shapes/Group-1000001645.svg" class="bg-shape" alt="background Shape 4">
+                    </div>
+                </div>
+                <img src="./assets/shapes/Group1.svg" class="foreground-shape" alt="Foreground Shape 6">-->
+>>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
 
         <div class="about-us" id="about">
             <h2>About Us</h2>
@@ -133,6 +160,7 @@
                     if (projects != null) {
                         for (Projects project : projects) {
                             System.out.println("project name is " + project.getName());
+<<<<<<< HEAD
                             System.out.println("project image is  " + project.getImage());
                 %>
                 <div class="project">
@@ -140,6 +168,11 @@
                     <%String imagePath = "ImgDirectory/" + imageName;%>
 
                     <img src="<%=imagePath%>"alt="<%= project.getName()%>" id="projImg" width="25%" height="45%"/>
+=======
+                %>
+                <div class="project">
+                    <img src="./assets/images/pexels-brett-sayles-2881232-1.svg" alt="<%= project.getName()%>" />
+>>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
                     <h3><%= project.getName()%></h3>
                     <p><%= project.getDesc()%></p>
                     <button>Read More</button>
@@ -204,7 +237,10 @@
                         <h3>Client Name 5</h3>
                         <p>Designer, Company 5</p>
                     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
                 </div>
             </section>
 

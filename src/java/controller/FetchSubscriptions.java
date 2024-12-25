@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,6 +25,7 @@ import model.Subscriber;
  * @author HP
  */
 @WebServlet("/fetchSubscriptions")
+
 
 public class FetchSubscriptions extends HttpServlet {
 
@@ -44,6 +46,7 @@ public class FetchSubscriptions extends HttpServlet {
             request.setAttribute("subscribers", subscribers);
 //            System.out.println("chk3...");
             request.getRequestDispatcher("subscription.jsp").forward(request, response);
+
 
         } catch (SQLException ex) {
             Logger.getLogger(FetchSubscriptions.class.getName()).log(Level.SEVERE, null, ex);

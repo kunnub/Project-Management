@@ -27,7 +27,6 @@ import model.Projects;
  * @author HP
  */
 @WebServlet("/editProject")
-
 @MultipartConfig
 public class EditProjectDetails extends HttpServlet {
 
@@ -40,7 +39,7 @@ public class EditProjectDetails extends HttpServlet {
 //        String idParam = request.getParameter("id");
         System.out.println("id param is  " + idParam);
         if (idParam == null || idParam.isEmpty()) {
-            response.sendRedirect("error.jsp");  // Handle missing ID
+            response.sendRedirect("errorPage.jsp");  // Handle missing ID
             return;
         }
 

@@ -29,9 +29,11 @@ public class GetSubscribers {
 
         Connection con = DBConnection.getConnection();
         Statement stmt = con.createStatement();
+
         ResultSet rs = stmt.executeQuery(query);
 
 //            System.out.println("connection established...chk4");
+
         if (!rs.isBeforeFirst()) {  // Checks if the result set is empty
             System.out.println("ResultSet is empty.");
         } else {
@@ -48,6 +50,7 @@ public class GetSubscribers {
                 subscribers.add(subscriber);
 //            System.out.println("subscribers added to the list...chk 5");
             }
+
         }
 
         return subscribers; // Return the list of subscribers

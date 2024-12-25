@@ -34,6 +34,14 @@
 
             footer p {
                 padding: 1% 30%;
+
+                margin-top: 50px;
+                box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+                margin-bottom: 0;
+            }
+
+            footer p {
+                margin: 0;
                 font-size: 1rem;
             }
         </style>

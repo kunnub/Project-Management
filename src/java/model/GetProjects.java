@@ -24,6 +24,7 @@ public class GetProjects {
         List<Projects> projectList = new ArrayList<>();
 
         String query = "SELECT * FROM flipr.projects;";
+
         try {
 
             Connection con = DBConnection.getConnection();
@@ -42,6 +43,7 @@ public class GetProjects {
                     String imagePath = rs.getString("projectImg");
 
                     Projects projectDetails = new Projects(id, name, desc, status, imagePath);
+
                     projectList.add(projectDetails);
                 }
             }

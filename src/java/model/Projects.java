@@ -18,11 +18,13 @@ public class Projects {
     private String image;
 
     public Projects(int id, String name, String desc, String image, String status) {
+
         this.setId(id);
         this.setName(name);
         this.setDesc(desc);
         this.setStatus(status);
         this.setImage(image);
+
 
     }
 

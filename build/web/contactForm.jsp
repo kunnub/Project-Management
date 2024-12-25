@@ -13,10 +13,17 @@
         <title>Contact Form Submissions</title>
         <link rel="stylesheet" href="./AdminFormsCSS.css"/>
     </head>
+<<<<<<< HEAD
     <body>        <jsp:include page="./AdminNavbar.jsp" />
 
         <h1>Contact Form Submissions</h1>
         <table style="height: 100%;">
+=======
+    <body>        <a href="./AdminNavbar.jsp"></a>
+
+        <h1>Contact Form Submissions</h1>
+        <table>
+>>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
             <thead>
                 <tr>
                     <th>Id</th>
@@ -64,7 +71,11 @@
 
 
         </table>
+<<<<<<< HEAD
         <jsp:include page="./AdminFooter.jsp" />
+=======
+        <a href="./AdminFooter.jsp"></a>
+>>>>>>> 259ff45806a07ac69aaebc4fbf7bb0dc1ff7a989
 
     </body>
 </html>

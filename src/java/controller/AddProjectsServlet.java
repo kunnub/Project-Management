@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
+
 import model.AddProjects;
 
 /**
@@ -70,5 +71,6 @@ public class AddProjectsServlet extends HttpServlet {
         }
 
     }
+
 
 }
