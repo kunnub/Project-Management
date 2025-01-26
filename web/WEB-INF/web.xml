@@ -19,11 +19,11 @@
     </servlet>
     <servlet>
         <servlet-name>DeleteSubscriptions</servlet-name>
-        <servlet-class>controller.DeleteSubscriptions</servlet-class>
+        <servlet-class>adminPanel.controller.DeleteSubscriptions</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FetchSubscriptions</servlet-name>
-        <servlet-class>controller.FetchSubscriptions</servlet-class>
+        <servlet-class>adminPanel.controller.FetchSubscriptions</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>AdminLogger</servlet-name>
@@ -31,34 +31,56 @@
     </servlet>
     <servlet>
         <servlet-name>FetchContactDetails</servlet-name>
-        <servlet-class>controller.FetchContactDetails</servlet-class>
+        <servlet-class>adminPanel.controller.FetchContactDetails</servlet-class>
     </servlet>
-
     <!-- Servlet Mappings -->
     <servlet>
         <servlet-name>FetchUserData</servlet-name>
-        <servlet-class>controller.FetchUserData</servlet-class>
+        <servlet-class>adminPanel.controller.FetchUserData</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FetchProjectDetails</servlet-name>
-        <servlet-class>controller.FetchProjectDetails</servlet-class>
+        <servlet-class>adminPanel.controller.FetchProjectDetails</servlet-class>
     </servlet>
     <servlet>
-
         <servlet-name>EditProjectDetails</servlet-name>
-        <servlet-class>controller.EditProjectDetails</servlet-class>
+        <servlet-class>adminPanel.controller.EditProjectDetails</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>DeleteProjectsServlet</servlet-name>
-        <servlet-class>controller.DeleteProjectsServlet</servlet-class>
+        <servlet-class>adminPanel.controller.DeleteProjectsServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>AddProjectsServlet</servlet-name>
-        <servlet-class>controller.AddProjectsServlet</servlet-class>
+        <servlet-class>adminPanel.controller.AddProjectsServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>displayProjectsHome</servlet-name>
         <servlet-class>controller.displayProjectsHome</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BrokerProjShow</servlet-name>
+        <servlet-class>brokerPanel.controller.BrokerProjShow</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BrokerProjEditS</servlet-name>
+        <servlet-class>brokerPanel.controller.BrokerProjEditS</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddBuyerServlet</servlet-name>
+        <servlet-class>adminPanel.controller.AddBuyerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FetchBuyers</servlet-name>
+        <servlet-class>controller.FetchBuyers</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditBuyerServlet</servlet-name>
+        <servlet-class>adminPanel.controller.EditBuyerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteBuyerServlet</servlet-name>
+        <servlet-class>adminPanel.controller.DeleteBuyerServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RegController</servlet-name>
@@ -102,7 +124,6 @@
         <url-pattern>/FetchProjectDetails</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-
         <servlet-name>EditProjectDetails</servlet-name>
         <url-pattern>/EditProjectDetails</url-pattern>
     </servlet-mapping>
@@ -128,7 +149,30 @@
         <filter-name>AdminAuthFilter</filter-name>
         <url-pattern>/admin/*</url-pattern>
     </filter-mapping>-->
-
+    <servlet-mapping>
+        <servlet-name>BrokerProjShow</servlet-name>
+        <url-pattern>/BrokerProjShow</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BrokerProjEditS</servlet-name>
+        <url-pattern>/BrokerProjEditS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddBuyerServlet</servlet-name>
+        <url-pattern>/AddBuyerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FetchBuyers</servlet-name>
+        <url-pattern>/FetchBuyers</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditBuyerServlet</servlet-name>
+        <url-pattern>/EditBuyerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteBuyerServlet</servlet-name>
+        <url-pattern>/DeleteBuyerServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>

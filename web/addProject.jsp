@@ -31,7 +31,24 @@
                 <select id="projectStatusSelect" name="status">
                     <option value="Active">For-Sale</option>
                     <option value="Inactive">Sold</option>
+                    <option value="under-Negotiation">Under Negotiation</option>
+                    <option value="Canceled">Canceled</option>
                 </select>
+            </div>
+            
+            <div class="form-group" id="projectNameGroup">
+                <label for="projectBrokerInput">Broker Id:</label>
+                <input type="text" id="projectNameInput" name="brokerId" required>
+            </div>
+            
+            <div class="form-group" id="projectNameGroup">
+                <label for="projectBuyerInput">Buyer:</label>
+                <input type="text" id="projectNameInput" name="buyerId" required>
+            </div>
+            
+            <div class="form-group" id="projectNameGroup">
+                <label for="projectSellerInput">Seller:</label>
+                <input type="text" id="projectNameInput" name="sellerId" required>
             </div>
             <!--Image field-->
             <div class="form-group" id="projectStatusGroup">

@@ -16,20 +16,21 @@ import java.sql.SQLException;
  */
 public class AddContactForm {
 
-    public boolean isContacted(String name, String email, String phno, String address) {
+    public boolean isContacted(String name, String email, String phno, String query,String address) {
 
         boolean contacted = false;
         int i = 0;
-        if (!name.trim().isEmpty() && !email.trim().isEmpty() && !phno.trim().isEmpty() && !address.trim().isEmpty()) {
+        if (!name.trim().isEmpty() && !email.trim().isEmpty() && !phno.trim().isEmpty() && !query.trim().isEmpty() && !address.trim().isEmpty()) {
 //            System.out.println("values are not fetched properly");
             try {
                 Connection con = DBConnection.getConnection();
-                PreparedStatement pst = con.prepareStatement("INSERT INTO flipr.contact_form (client_name,client_email,client_phno,client_add)VALUES (?,?,?,?);");
+                PreparedStatement pst = con.prepareStatement("INSERT INTO flipr.contact_form (client_name,client_email,client_phno,client_add,client_query)VALUES (?,?,?,?,?);");
 
                 pst.setString(1, name);
                 pst.setString(2, email);
                 pst.setString(3, phno);
                 pst.setString(4, address);
+                pst.setString(5,query);
 
                 i = pst.executeUpdate();
 //               System.out.println("Rows affected: " + i);

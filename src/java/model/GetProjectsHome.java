@@ -31,8 +31,11 @@ public class GetProjectsHome {
                 String desc = rs.getString("projectDesc");
                 String imagePath = rs.getString("projectImg");
                 String status = rs.getString("projectStatus");
+                String broker = rs.getString("brokerId");
+                String buyer = rs.getString("buyerId");
+                String seller = rs.getString("sellerId");
 
-                Projects projectDetails = new Projects(id, name, desc, imagePath, status);
+                Projects projectDetails = new Projects(id, name, desc, imagePath, status, broker, buyer, seller);
                 projectsList.add(projectDetails);
 
             }

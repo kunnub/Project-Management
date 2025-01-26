@@ -16,20 +16,21 @@ import java.sql.SQLException;
  */
 public class Registrator {
 
-    public boolean isRegister(String name, String email, String password) throws SQLException {
+    public boolean isRegister(String name, String email, String password,String phone_no) throws SQLException {
         boolean register;
 
         int i = 0;
-        if (!name.trim().equals("") && !email.trim().equals("") && (password.trim().length() >= 8)) {
+        if (!name.trim().equals("") && !email.trim().equals("") && (password.trim().length() >= 8)&& phone_no.length()==10) {
             System.out.println(name);
             System.out.println(email);
 
             Connection con = DBConnection.getConnection();
-            PreparedStatement pst = con.prepareStatement("INSERT INTO flipr.clients(name,email,password) VALUES(?,?,?);");
+            PreparedStatement pst = con.prepareStatement("INSERT INTO flipr.clients(name,email,password,phone_no) VALUES(?,?,?,?);");
 
             pst.setString(1, name);
             pst.setString(2, email);
             pst.setString(3, password);
+            pst.setString(4,phone_no);
 
             i = pst.executeUpdate();
             System.out.println(i);

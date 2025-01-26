@@ -3,41 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/RegController.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/AdminLogger.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/LoginController.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/registration.css</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/Subscriber.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/displayProjectsHome.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/GetProjectsHome.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/GetContactDetails.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/Registrator.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/DeleteProjects.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/Users.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/home.css</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/AddContact.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/FetchSubscriptions.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/home.jsp</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/EditProjectDetails.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/GetProjects.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/AdminFormsCSS.css</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/GetBuyers.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/WEB-INF/web.xml</file>
             <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/Projects.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/GetSubscribers.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/DeleteSubscriptions.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/AdminFooter.jsp</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/FetchProjectDetails.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/ContactDetails.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/DeleteProjectsServlet.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/AddProjects.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/FetchContactDetails.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/GetProjectforEdit.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/UpdateProjectDetail.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/AddSubscription.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/LoginAuthenticator.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/FetchUserData.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/controller/AddProjectsServlet.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/AddSubscribers.java</file>
-            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/DeleteSubscribers.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/adminPanel/model/GetBuyerForEdit.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/adminPanel/controller/EditBuyerServlet.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/editBuyers.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/web/buyers.jsp</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/adminPanel/model/EditBuyer.java</file>
+            <file>file:/C:/Users/HP/Documents/NetBeansProjects/projectMangment/src/java/model/Buyers.java</file>
         </group>
     </open-files>
 </project-private>

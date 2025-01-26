@@ -44,6 +44,7 @@
                     <input type="text" name="name" placeholder="Full Name" required>
                     <input type="email" name="email" placeholder="Enter Email Address" required>
                     <input type="tel" name="mobile" placeholder="Mobile Number" required>
+                    <input type="text" name="query" placeholder="Enter your query or concern" required>
                     <input type="text" name="address" placeholder="Area, City" required>
                     <button type="submit" class="btn">Contact Us</button>
                 </form>
@@ -141,7 +142,7 @@
                     <img src="<%=imagePath%>" alt="<%=imageName%> " height="45% />"
                     <h3><%= project.getName()%></h3>
                     <p><%= project.getDesc()%></p>
-                    <button>Read More</button>
+                    <button>view details</button>
                 </div>
                 <%
                         }

@@ -14,14 +14,16 @@ public class Users {
     private int user_id;
     private String name;
     private String email;
+    private String phone_no;
 
-    public Users(int user_id, String name, String email) {
+    public Users(int user_id, String name, String email,String phone_no) {
 
         System.out.println("Users class called");
 
         this.setUser_id(user_id);
         this.setName(name);
         this.setEmail(email);
+        this.setPhone_no(phone_no);
 
     }
 
@@ -63,6 +65,19 @@ public class Users {
   
     public void setUser_id(int user_id) {
         this.user_id = user_id;
+    }
+
+    private void setPhone_no(String phone_no) {
+        this.phone_no=phone_no;
+    }
+
+    /**
+     * @return the phone_no
+     */
+    public String getPhone_no() {
+        
+        System.out.println(phone_no + "in users.java");
+        return phone_no;
     }
 
 }

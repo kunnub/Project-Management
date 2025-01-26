@@ -34,11 +34,12 @@ public class RegController extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        String phone_no=request.getParameter("phone_no");
 
         Registrator rg = new Registrator();
         boolean register = false;
         try {
-            register = rg.isRegister(name, email, password);
+            register = rg.isRegister(name, email, password,phone_no);
         } catch (SQLException e) {
             System.out.println(e);
 

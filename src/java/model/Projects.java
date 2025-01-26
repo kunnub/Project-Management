@@ -14,16 +14,22 @@ public class Projects {
     private int Id;
     private String name;
     private String desc;
-    private String status;
     private String image;
+    private String status;
+    private String broker;
+    private String buyer;
+    private String seller;
 
-    public Projects(int id, String name, String desc, String image, String status) {
+    public Projects(int id, String name, String desc, String image, String status,String broker,String buyer,String seller) {
 
         this.setId(id);
         this.setName(name);
         this.setDesc(desc);
         this.setStatus(status);
         this.setImage(image);
+        this.setBroker(broker);
+        this.setBuyer(buyer);
+        this.setSeller(seller);
 
     }
 
@@ -95,5 +101,47 @@ public class Projects {
      */
     public void setImage(String image) {
         this.image = image;
+    }
+
+    /**
+     * @return the broker
+     */
+    public String getBroker() {
+        return broker;
+    }
+
+    /**
+     * @param broker the broker to set
+     */
+    public void setBroker(String broker) {
+        this.broker = broker;
+    }
+
+    /**
+     * @return the buyer
+     */
+    public String getBuyer() {
+        return buyer;
+    }
+
+    /**
+     * @param buyer the buyer to set
+     */
+    public void setBuyer(String buyer) {
+        this.buyer = buyer;
+    }
+
+    /**
+     * @return the seller
+     */
+    public String getSeller() {
+        return seller;
+    }
+
+    /**
+     * @param seller the seller to set
+     */
+    public void setSeller(String seller) {
+        this.seller = seller;
     }
 }

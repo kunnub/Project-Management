@@ -25,7 +25,11 @@
                 <th>Description</th>
                 <th>project Image</th>
                 <th>Project Status</th>
-                <th>Actions</th>
+                <th>Broker </th>
+                <th>Buyer </th>
+                <th>Seller </th>
+                <th>Action</th>
+
             </tr>
 
             <%
@@ -43,6 +47,10 @@
                 <td><%= project.getDesc()%></td>
                 <td><%= project.getStatus()%></td>
                 <td><%=project.getImage()%></td>
+                <td><%=project.getBroker()%></td>
+                <td><%=project.getBuyer()%></td>
+                <td><%=project.getSeller()%></td>
+                
                 <td>
                     <!-- Edit Button -->
                     <form action="EditProjectDetails" method="get" style="display:inline;">

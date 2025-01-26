@@ -105,7 +105,7 @@ button:hover, .delete-btn:hover {
 }
 
 /* Form Container Styling */
-#addProjectForm, #editProjectForm {
+#addProjectForm, #editProjectForm, #addBuyerForm {
     margin: 2% auto;
     width: 60%;
     max-width: 800px;
@@ -167,7 +167,7 @@ textarea {
     background-color: #0056b3;
 }
 
-#addNewProject,#backToProjectList{
+#addNewProject,#backToProjectList,#addNewBuyer, #backToBuyersList{
     border: 2px solid black;
     font-weight: bolder;
     width: 15%;
@@ -180,9 +180,30 @@ textarea {
     font-size: 17px;
     text-align: center;
 }
+#buttonContainer{
+   display: block;
+    align-items: center; /* Align items vertically if needed */
+    margin: 0.7% 30%;
+}
+#buyersButton, #sellersButton {
+    border: 2px solid black;
+    font-weight: bolder;
+    width: 25%;
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 17px;
+    text-align: center; /* Center text inside the button */
+    display: inline-block; /* Align buttons side by side */
+    margin: 0.7% 10%; /* Add margin between buttons */
+    
+}
 
 
-#addNewProject:hover ,#backToProjectList:hover{
+
+#addNewProject:hover ,#backToProjectList:hover ,#addNewBuyer:hover ,#backToBuyersList:hover{
     cursor: pointer;
     background-color: graytext;
 }

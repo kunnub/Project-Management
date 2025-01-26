@@ -20,9 +20,10 @@
         <table style="height: 100%;">
 
             <tr>
-                <th>Client Id</th>
-                <th>Client Name</th>
-                <th>Client Email</th>
+                <th>User Id</th>
+                <th> Name</th>
+                <th> Email</th>
+                <th>Phone No.</th>
             </tr>
             <%
                 List<model.Users> jspUserList = (List<model.Users>) request.getAttribute("userList");
@@ -34,7 +35,8 @@
                 <td><%=user.getUser_id()%></td>
                 <td><%= user.getName()%></td>
                 <td><%= user.getEmail()%></td>
-
+                <td><%= user.getPhone_no()%></td>
+                <% System.out.println("jsp page" + user.getUser_id());%>
             </tr>
             <% }
             } else {
@@ -45,6 +47,11 @@
             </tr>
             <%                }%>
         </table>
+        <div id="buttonContainer">
+            <a href="FetchBuyers" id="buyersButton">Buyers</a>
+            <a href="FetchSellers" id="sellersButton">Sellers</a>
+        </div>
+
         <jsp:include page="./AdminFooter.jsp" />
 
     </body>

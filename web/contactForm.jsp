@@ -24,7 +24,12 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Phone_no</th>
+                    <th>Query</th>
                     <th>Address</th>
+                    <th>Is Consulted ?</th>
+                    <th>Result/Outcome</th>
+                    <th>Assigned Broker</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -50,7 +55,25 @@
                     <td><%= contact.getName()%></td>
                     <td><%= contact.getEmail()%></td>
                     <td><%= contact.getPhone_no()%></td>
+                    <td><%=contact.getQuery()%></td>
                     <td><%= contact.getAddress()%></td>
+                    <td><%=contact.getIsConsulted()%></td>
+                    <td><%=contact.getResult()%></td>
+                    <td><%=contact.getBroker()%></td>
+                     
+                    <td>
+                    <!-- Edit Button -->
+                    <form action="EditProjectDetails" method="get" style="display:inline;">
+                        <input type="hidden" name="id" value="<%= contact.getId()%>">
+                        <button type="submit">Edit</button>
+                    </form>
+
+                    <!-- Delete Button -->
+                    <form action="DeleteProjectsServlet" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="<%= contact.getId()%>">
+                        <button type="submit" class="delete-btn" onclick="return confirm('Are you sure you want to delete this project?')">Delete</button>
+                    </form>
+                </td>
                 </tr>
                 <%
 

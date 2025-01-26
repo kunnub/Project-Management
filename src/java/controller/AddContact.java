@@ -33,6 +33,7 @@ public class AddContact extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String phno = request.getParameter("mobile");
+        String query=request.getParameter("query");
         String address = request.getParameter("address");
 
 //        System.out.println("Name: " + name);
@@ -42,7 +43,7 @@ public class AddContact extends HttpServlet {
         AddContactForm contact = new AddContactForm();
         boolean cont = false;
 
-        cont = contact.isContacted(name, email, phno, address);
+        cont = contact.isContacted(name, email, phno,query, address);
         System.out.println(cont);
 
         if (cont) {

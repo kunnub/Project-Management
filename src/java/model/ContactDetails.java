@@ -15,15 +15,23 @@ public class ContactDetails {
     private String name;
     private String email;
     private String phone_no;
+    private String query;
     private String address;
+    private String isConsulted;
+    private String result;
+    private String broker;
 
-    public ContactDetails(int id, String name, String email, String phone_no, String address) {
+    public ContactDetails(int id, String name, String email, String phone_no,String query, String address, String isConsulted, String result,String broker) {
         System.out.println("helllooooo");
         this.setId(id);
         this.setName(name);
         this.setEmail(email);
         this.setPhone_no(phone_no);
+        this.setQuery(query);
         this.setAddress(address);
+        this.setIsConsulted(getIsConsulted());
+        this.setResult(getResult());
+        this.setBroker(broker);
     }
 
     /**
@@ -96,6 +104,62 @@ public class ContactDetails {
      */
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    /**
+     * @return the query
+     */
+    public String getQuery() {
+        return query;
+    }
+
+    /**
+     * @param query the query to set
+     */
+    public void setQuery(String query) {
+        this.query = query;
+    }
+
+    /**
+     * @return the isConsulted
+     */
+    public String getIsConsulted() {
+        return isConsulted;
+    }
+
+    /**
+     * @param isConsulted the isConsulted to set
+     */
+    public void setIsConsulted(String isConsulted) {
+        this.isConsulted = isConsulted;
+    }
+
+    /**
+     * @return the result
+     */
+    public String getResult() {
+        return result;
+    }
+
+    /**
+     * @param result the result to set
+     */
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    /**
+     * @return the broker
+     */
+    public String getBroker() {
+        return broker;
+    }
+
+    /**
+     * @param broker the broker to set
+     */
+    public void setBroker(String broker) {
+        this.broker = broker;
     }
 
 }
