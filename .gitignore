@@ -1,0 +1,18 @@
+# Ignore libraries
+/libs/
+*.jar
+
+# Ignore build directories
+/target/
+/build/
+
+# Ignore IDE-specific files (e.g., NetBeans, IntelliJ)
+.idea/
+*.iml
+.project
+.classpath
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
